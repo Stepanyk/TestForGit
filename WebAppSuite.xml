@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite thread-count="3" name="webappsuite" parallel="tests">
+    <test name="Web app test on Android 8 first">
+        <parameter name="platform" value="Android 8.0"/>
+        <parameter name="udid" value="emulator-5556"/>
+        <parameter name="chromeDriverPort" value="9516"/>
+        <parameter name="chromeDriverPath" value="/Users/vadimrudenko/Projects/Preply/appium_parallel_execution/chromedriver"/>
+        <parameter name="appiumurl" value="http://127.0.0.1:4723/wd/hub"/>
+        <classes>
+            <class name="AndroidWebAppParallelTests" />
+        </classes>
+    </test>
+    <test name="Web app test on Android 8 second">
+        <parameter name="platform" value="Android 8.0"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="chromeDriverPort" value="9515"/>
+        <parameter name="chromeDriverPath" value="/Users/vadimrudenko/Projects/Preply/appium_parallel_execution/chromedriver"/>
+        <parameter name="appiumurl" value="http://127.0.0.1:4733/wd/hub"/>
+        <classes>
+            <class name="AndroidWebAppParallelTests" />
+        </classes>
+    </test>
+    <test name="Web app test on Android 8 third">
+        <parameter name="platform" value="Android 8.0"/>
+        <parameter name="udid" value="emulator-5558"/>
+        <parameter name="chromeDriverPort" value="9517"/>
+        <parameter name="chromeDriverPath" value="/Users/vadimrudenko/Projects/Preply/appium_parallel_execution/chromedriver"/>
+        <parameter name="appiumurl" value="http://127.0.0.1:4743/wd/hub"/>
+        <classes>
+            <class name="AndroidWebAppParallelTests" />
+        </classes>
+    </test>
+</suite>
